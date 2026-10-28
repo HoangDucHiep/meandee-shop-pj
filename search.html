@@ -159,26 +159,42 @@
           </div>
         </div>
 
-        <!-- Filter 4: Price Range -->
+        <!-- Filter 4: Price Range Dual Slider & Direct Input -->
         <div class="filter-group">
-          <h3 class="filter-group-title">Khoảng Giá</h3>
-          <div class="price-range-options">
-            <label class="price-radio-label">
-              <input type="radio" name="priceRange" value="all" checked>
-              <span>Tất cả mức giá</span>
-            </label>
-            <label class="price-radio-label">
-              <input type="radio" name="priceRange" value="under-400">
-              <span>Dưới 400.000₫</span>
-            </label>
-            <label class="price-radio-label">
-              <input type="radio" name="priceRange" value="400-650">
-              <span>400.000₫ – 650.000₫</span>
-            </label>
-            <label class="price-radio-label">
-              <input type="radio" name="priceRange" value="above-650">
-              <span>Trên 650.000₫</span>
-            </label>
+          <div class="filter-group-title">
+            <span>Khoảng Giá</span>
+            <span id="priceRangeDisplay" style="font-size: 0.75rem; color: var(--c-primary); font-weight: 700;">0₫ – 1.000.000₫</span>
+          </div>
+          
+          <div class="price-slider-wrap">
+            <!-- Direct Min & Max Input -->
+            <div class="price-inputs-row">
+              <div class="price-input-box">
+                <label for="priceInputMin">Từ</label>
+                <input type="number" id="priceInputMin" min="0" max="1000000" step="10000" value="0" aria-label="Giá thấp nhất">
+                <span class="price-input-unit">₫</span>
+              </div>
+              <span class="price-input-separator">–</span>
+              <div class="price-input-box">
+                <label for="priceInputMax">Đến</label>
+                <input type="number" id="priceInputMax" min="0" max="1000000" step="10000" value="1000000" aria-label="Giá cao nhất">
+                <span class="price-input-unit">₫</span>
+              </div>
+            </div>
+
+            <!-- Dual Range Sliders (Draggable) -->
+            <div class="dual-slider-track-wrap">
+              <div class="slider-track-base"></div>
+              <div class="slider-track-fill" id="sliderTrackFill" style="left: 0%; right: 0%;"></div>
+              <input type="range" class="range-input-slider" id="priceSliderMin" min="0" max="1000000" step="10000" value="0" aria-label="Thanh trượt giá tối thiểu">
+              <input type="range" class="range-input-slider" id="priceSliderMax" min="0" max="1000000" step="10000" value="1000000" aria-label="Thanh trượt giá tối đa">
+            </div>
+
+            <div class="price-slider-labels">
+              <span>0₫</span>
+              <span>500k</span>
+              <span>1.000.000₫</span>
+            </div>
           </div>
         </div>
 
@@ -193,7 +209,7 @@
         <!-- Results Header Bar -->
         <div class="listing-results-header">
           <div class="results-count" id="resultsCount">
-            Hiển thị <strong id="countNum">8</strong> sản phẩm
+            Hiển thị <strong id="countNum">12</strong> sản phẩm
           </div>
           <div class="sort-select-wrap">
             <label for="sortDropdown" class="sort-label">Sắp xếp:</label>
@@ -414,16 +430,137 @@
             </div>
           </article>
 
+          <!-- Product Item 9: Urban Tech Full-Zip Hoodie -->
+          <article class="product-card" data-category="hoodie-zip" data-price="750000" data-sizes="M,L,XL" data-colors="den,navy" data-bestseller="false" data-name="urban tech full zip hoodie">
+            <div class="product-badge-group">
+              <span class="product-badge badge-new">Premium</span>
+            </div>
+            <div class="product-thumb-wrap">
+              <img src="assert/demo-products/den.webp" alt="Urban Tech Full-Zip Hoodie" class="listing-card-img" data-default="assert/demo-products/den.webp">
+              <div class="product-quick-action">
+                <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+              </div>
+            </div>
+            <div class="product-details">
+              <span class="product-category-meta">Áo hoodies zip</span>
+              <h3 class="product-title">
+                <a href="product.html">Urban Tech Full-Zip Hoodie</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="product-price">750.000₫</span>
+              </div>
+              <div class="swatches-row">
+                <span class="color-swatch-dot active" style="background-color: #1A1A1A;" title="Đen"></span>
+                <span class="color-swatch-dot" style="background-color: #233D7B;" title="Navy"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Item 10: Heavy Weight Raglan Hoodie -->
+          <article class="product-card" data-category="hoodie" data-price="670000" data-sizes="M,L" data-colors="xam-tieu,den" data-bestseller="true" data-name="heavy weight raglan hoodie">
+            <div class="product-badge-group">
+              <span class="product-badge badge-sale">-15%</span>
+            </div>
+            <div class="product-thumb-wrap">
+              <img src="assert/demo-products/xam_tieu.webp" alt="Heavy Weight Raglan Hoodie" class="listing-card-img" data-default="assert/demo-products/xam_tieu.webp">
+              <div class="product-quick-action">
+                <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+              </div>
+            </div>
+            <div class="product-details">
+              <span class="product-category-meta">Áo hoodies</span>
+              <h3 class="product-title">
+                <a href="product.html">Heavy Weight Raglan Hoodie</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="product-price">670.000₫</span>
+                <span class="product-price-old">790.000₫</span>
+              </div>
+              <div class="swatches-row">
+                <span class="color-swatch-dot active" style="background-color: #A8A8A8;" title="Xám Tiêu"></span>
+                <span class="color-swatch-dot" style="background-color: #1A1A1A;" title="Đen"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Item 11: Minimal Boxy Pocket T-Shirt -->
+          <article class="product-card" data-category="tshirt" data-price="390000" data-sizes="M,L,XL" data-colors="den,xam-dam,navy" data-bestseller="false" data-name="minimal boxy pocket t shirt">
+            <div class="product-thumb-wrap">
+              <img src="assert/demo-products/xam-dam.webp" alt="Minimal Boxy Pocket T-Shirt" class="listing-card-img" data-default="assert/demo-products/xam-dam.webp">
+              <div class="product-quick-action">
+                <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+              </div>
+            </div>
+            <div class="product-details">
+              <span class="product-category-meta">Áo thun</span>
+              <h3 class="product-title">
+                <a href="product.html">Minimal Boxy Pocket T-Shirt</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="product-price">390.000₫</span>
+              </div>
+              <div class="swatches-row">
+                <span class="color-swatch-dot active" style="background-color: #5F6368;" title="Xám Đậm"></span>
+                <span class="color-swatch-dot" style="background-color: #1A1A1A;" title="Đen"></span>
+                <span class="color-swatch-dot" style="background-color: #233D7B;" title="Navy"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Item 12: Chunky Textured Cable Sweater -->
+          <article class="product-card" data-category="sweater" data-price="790000" data-sizes="M,L,XL" data-colors="xam-chi,xam-tieu" data-bestseller="true" data-name="chunky textured cable sweater">
+            <div class="product-badge-group">
+              <span class="product-badge badge-new">New Season</span>
+            </div>
+            <div class="product-thumb-wrap">
+              <img src="assert/demo-products/xam-chi.webp" alt="Chunky Textured Cable Sweater" class="listing-card-img" data-default="assert/demo-products/xam-chi.webp">
+              <div class="product-quick-action">
+                <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+              </div>
+            </div>
+            <div class="product-details">
+              <span class="product-category-meta">Áo sweater</span>
+              <h3 class="product-title">
+                <a href="product.html">Chunky Textured Cable Sweater</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="product-price">790.000₫</span>
+              </div>
+              <div class="swatches-row">
+                <span class="color-swatch-dot active" style="background-color: #4A4D53;" title="Xám Chì"></span>
+                <span class="color-swatch-dot" style="background-color: #A8A8A8;" title="Xám Tiêu"></span>
+              </div>
+            </div>
+          </article>
+
           <!-- Empty State (Shown when no items match the filter) -->
           <div class="empty-state" id="emptyState">
             <svg class="empty-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6"/>
             </svg>
             <h3 class="empty-title">Không tìm thấy sản phẩm phù hợp</h3>
-            <p class="empty-desc">Thử điều chỉnh hoặc xóa bớt các tiêu chí lọc để xem thêm sản phẩm khác.</p>
+            <p class="empty-desc">Thử điều chỉnh khoảng giá hoặc xóa bớt các tiêu chí lọc để xem thêm sản phẩm.</p>
             <button type="button" class="btn btn-primary" id="btnEmptyReset">Xóa Bộ Lọc &amp; Xem Tất Cả</button>
           </div>
 
+        </div>
+
+        <!-- Pagination Controls (Phần Phân Trang) -->
+        <div class="pagination-container" id="paginationContainer">
+          <div class="pagination-controls">
+            <button type="button" class="page-btn page-nav-arrow" id="btnPrevPage" aria-label="Trang trước">
+              &larr; Trước
+            </button>
+            <div id="pageNumbersGroup" style="display: flex; gap: 8px;">
+              <!-- Dynamic page buttons rendered via JS: [1], [2], ... -->
+            </div>
+            <button type="button" class="page-btn page-nav-arrow" id="btnNextPage" aria-label="Trang tiếp">
+              Sau &rarr;
+            </button>
+          </div>
+          <div class="pagination-info" id="paginationInfo">
+            Hiển thị trang 1 / 2 (6 sản phẩm mỗi trang)
+          </div>
         </div>
       </section>
     </div>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tìm kiếm và lọc các sản phẩm áo hoodies zip, hoodies, áo thun và sweater thời trang cao cấp từ meandee STUDIO.">
+  <title>Cửa Hàng &amp; Tìm Kiếm Sản Phẩm — meandee STUDIO</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assert/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="brandLogo">
+        <img src="assert/logo.png" alt="meandee STUDIO Logo">
+        <div class="brand-text">
+          <span class="brand-name">meandee</span>
+          <span class="brand-sub">STUDIO</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="search.html" class="nav-link active">Shop</a>
+        <a href="search.html?sort=newest" class="nav-link">New Arrivals</a>
+        <a href="index.html#about" class="nav-link">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="action-btn" aria-label="Tìm kiếm sản phẩm">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+          </svg>
+        </a>
+        <button class="action-btn" aria-label="Danh sách yêu thích">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+          </svg>
+          <span class="badge-count">1</span>
+        </button>
+        <button class="action-btn" id="headerCartBtn" aria-label="Giỏ hàng">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+          </svg>
+          <span class="badge-count" id="cartBadgeCount">2</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SEARCH HEADER SECTION
+       ========================================================================== -->
+  <section class="search-header-section">
+    <div class="container">
+      <div class="search-bar-wrap">
+        <span class="eyebrow">Catalogue &amp; Search</span>
+        <h1 class="search-title">Khám Phá Bộ Sưu Tập</h1>
+        <p class="text-muted" style="font-size: 0.9375rem;">
+          Tìm kiếm nhanh theo tên sản phẩm, danh mục hoặc sắc độ màu yêu thích của bạn
+        </p>
+
+        <!-- Big Search Bar -->
+        <div class="search-input-box">
+          <input type="text" id="mainSearchInput" placeholder="Nhập từ khóa tìm kiếm (VD: hoodie zip đen, áo thun, xám chì...)" autocomplete="off">
+          <button type="button" class="search-submit" id="searchSubmitBtn" aria-label="Tìm kiếm">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="22" height="22">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Keyword Auto-Suggestions -->
+        <div class="search-suggest-tags">
+          <span>Gợi ý nhanh:</span>
+          <button type="button" class="suggest-tag" data-query="Hoodie zip đen">Hoodie zip đen</button>
+          <button type="button" class="suggest-tag" data-query="Áo thun form rộng">Áo thun form rộng</button>
+          <button type="button" class="suggest-tag" data-query="Sweater nỉ">Sweater nỉ</button>
+          <button type="button" class="suggest-tag" data-query="Xám chì">Xám chì</button>
+          <button type="button" class="suggest-tag" data-query="Navy">Navy #233D7B</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MAIN LISTING LAYOUT (Sidebar Filters + Products Grid)
+       ========================================================================== -->
+  <main class="container">
+    <div class="listing-layout">
+      <!-- Left Sidebar: Filters Panel -->
+      <aside class="filters-sidebar" id="filtersSidebar">
+        <div class="filter-header-bar">
+          <h2 class="filter-main-title">Bộ Lọc Sản Phẩm</h2>
+          <button type="button" class="btn-reset-filters" id="btnResetFilters">Xóa tất cả</button>
+        </div>
+
+        <!-- Filter 1: Categories (4 danh mục cốt lõi) -->
+        <div class="filter-group">
+          <h3 class="filter-group-title">Danh Mục</h3>
+          <div class="filter-category-list">
+            <label class="filter-checkbox-item">
+              <input type="checkbox" name="category" value="hoodie-zip" id="filterCatZip">
+              <span>Áo hoodies zip</span>
+            </label>
+            <label class="filter-checkbox-item">
+              <input type="checkbox" name="category" value="hoodie" id="filterCatHoodie">
+              <span>Áo hoodies</span>
+            </label>
+            <label class="filter-checkbox-item">
+              <input type="checkbox" name="category" value="tshirt" id="filterCatTshirt">
+              <span>Áo thun</span>
+            </label>
+            <label class="filter-checkbox-item">
+              <input type="checkbox" name="category" value="sweater" id="filterCatSweater">
+              <span>Áo sweater</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Filter 2: Size Variant Selection -->
+        <div class="filter-group">
+          <h3 class="filter-group-title">Kích Thước (Size)</h3>
+          <div class="size-buttons-group">
+            <button type="button" class="size-filter-btn" data-size="M">[ M ]</button>
+            <button type="button" class="size-filter-btn" data-size="L">[ L ]</button>
+            <button type="button" class="size-filter-btn" data-size="XL">[ XL ]</button>
+          </div>
+        </div>
+
+        <!-- Filter 3: Color Swatches -->
+        <div class="filter-group">
+          <h3 class="filter-group-title">Màu Sắc</h3>
+          <div class="filter-colors-grid">
+            <div class="filter-color-option" data-color="den" title="Đen">
+              <span class="filter-color-ball" style="background-color: #1A1A1A;"></span>
+              <span class="filter-color-label">Đen</span>
+            </div>
+            <div class="filter-color-option" data-color="xam-chi" title="Xám Chì">
+              <span class="filter-color-ball" style="background-color: #4A4D53;"></span>
+              <span class="filter-color-label">Chì</span>
+            </div>
+            <div class="filter-color-option" data-color="xam-dam" title="Xám Đậm">
+              <span class="filter-color-ball" style="background-color: #5F6368;"></span>
+              <span class="filter-color-label">X.Đậm</span>
+            </div>
+            <div class="filter-color-option" data-color="xam-tieu" title="Xám Tiêu">
+              <span class="filter-color-ball" style="background-color: #A8A8A8;"></span>
+              <span class="filter-color-label">Tiêu</span>
+            </div>
+            <div class="filter-color-option" data-color="navy" title="Xanh Navy">
+              <span class="filter-color-ball" style="background-color: #233D7B;"></span>
+              <span class="filter-color-label">Navy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter 4: Price Range -->
+        <div class="filter-group">
+          <h3 class="filter-group-title">Khoảng Giá</h3>
+          <div class="price-range-options">
+            <label class="price-radio-label">
+              <input type="radio" name="priceRange" value="all" checked>
+              <span>Tất cả mức giá</span>
+            </label>
+            <label class="price-radio-label">
+              <input type="radio" name="priceRange" value="under-400">
+              <span>Dưới 400.000₫</span>
+            </label>
+            <label class="price-radio-label">
+              <input type="radio" name="priceRange" value="400-650">
+              <span>400.000₫ – 650.000₫</span>
+            </label>
+            <label class="price-radio-label">
+              <input type="radio" name="priceRange" value="above-650">
+              <span>Trên 650.000₫</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Filter CTA -->
+        <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 8px;">
+          <button type="button" class="btn btn-primary btn-block" id="btnApplyFilters">Áp Dụng Bộ Lọc</button>
+        </div>
+      </aside>
+
+      <!-- Right Column: Product Results Grid -->
+      <section class="results-container">
+        <!-- Results Header Bar -->
+        <div class="listing-results-header">
+          <div class="results-count" id="resultsCount">
+            Hiển thị <strong id="countNum">8</strong> sản phẩm
+          </div>
+          <div class="sort-select-wrap">
+            <label for="sortDropdown" class="sort-label">Sắp xếp:</label>
+            <select id="sortDropdown" class="sort-select">
+              <option value="default">Mới nhất (Newest)</option>
+              <option value="bestseller">Bán chạy nhất (Best Seller)</option>
+              <option value="price-asc">Giá: Thấp đến Cao</option>
+              <option value="price-desc">Giá: Cao đến Thấp</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products Grid (Interactive Cards) -->
+        <div class="listing-grid" id="listingGrid">
+          
+          <!-- Product Item 1: Magic Venue Zip Hoodie (Flagship PDP) -->
+          <article class="product-card" data-category="hoodie-zip" data-price="690000" data-sizes="M,L,XL" data-colors="den,xam-chi,xam-dam,xam-tieu" data-bestseller="true" data-name="magic venue heavyweight zip hoodie">
+            <div class="product-badge-group">
+              <span class="product-badge badge-new">New In</span>
+              <span class="product-badge badge-sale">-19%</span>
+            </div>
+            <div class="product-thumb-wrap">
+              <img src="assert/demo-products/den.webp" alt="Magic Venue Heavyweight Zip Hoodie" class="listing-card-img" data-default="assert/demo-products/den.webp">
+              <div class="product-quick-action">
+                <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+              </div>
+            </div>
+            <div class="product-details">
+              <span class="product-category-meta">Áo hoodies zip</span>
+              <h3 class="product-title">
+                <a href="product.html">Magic Venue Heavyweight Zip Hoodie</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="product-price">690.000₫</span>
+                <span class="product-price-old">850.000₫</span>
+              </div>
+              <div class="swatches-row">
+                <span class="color-swatch-dot active" style="background-color: #1A1A1A;" data-img="assert/demo-products/den.webp" title="Đen"></span>
+                <span class="color-swatch-dot" style="background-color: #4A4D53;" data-img="assert/demo-products/xam-chi.webp" title="Xám Chì"></span>
+                <span class="color-swatch-dot" style="background-color: #5F6368;" data-img="assert/demo-products/xam-dam.webp" title="Xám Đậm"></span>
+                <span class="color-swatch-dot" style="background-color: #A8A8A8;" data-img="assert/demo-products/xam_tieu.webp" title="Xám Tiêu"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Item 2: Boxy Heavyweight Pullover Hoodie -->
+          <article class="product-card" data-category="hoodie" data-price="650000" data-sizes="M,L,XL" data-colors="xam-dam,den,navy" data-bestseller="true" data-name="boxy heavyweight pullover hoodie">
+            <div class="product-badge-group">
+              <span class="product-badge badge-new">Best Seller</span>
+            </div>
+            <div class="product-thumb-wrap">
+              <img src="assert/demo-products/xam-dam.webp" alt="Boxy Heavyweight Pullover Hoodie" class="listing-card-img" data-default="assert/demo-products/xam-dam.webp">
+              <div class="product-quick-action">
+                <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+              </div>
+            </div>
+            <div class="product-details">
+              <span class="product-category-meta">Áo hoodies</span>
+              <h3 class="product-title">
+                <a href="product.html">Boxy Heavyweight Pullover Hoodie</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="product-price">650.000₫</span>
+              </div>
+              <div class="swatches-row">
+                <span class="color-swatch-dot active" style="background-color: #5F6368;" title="Xám Đậm"></span>
+                <span class="color-swatch-dot" style="background-color: #1A1A1A;" title="Đen"></span>
+                <span class="color-swatch-dot" style="background-color: #233D7B;" title="Navy"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Item 3: Studio Heavy Cotton Oversized Tee -->
+          <article class="product-card" data-category="tshirt" data-price="380000" data-sizes="M,L" data-colors="xam-chi,den" data-bestseller="false" data-name="studio heavy cotton oversized tee">
+            <div class="product-thumb-wrap">
+              <img src="assert/demo-products/xam-chi.webp" alt="Studio Heavy Cotton Oversized Tee" class="listing-card-img" data-default="assert/demo-products/xam-chi.webp">
+              <div class="product-quick-action">
+                <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+              </div>
+            </div>
+            <div class="product-details">
+              <span class="product-category-meta">Áo thun</span>
+              <h3 class="product-title">
+                <a href="product.html">Studio Heavy Cotton Oversized Tee</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="product-price">380.000₫</span>
+                <span class="product-price-old">450.000₫</span>
+              </div>
+              <div class="swatches-row">
+                <span class="color-swatch-dot active" style="background-color: #4A4D53;" title="Xám Chì"></span>
+                <span class="color-swatch-dot" style="background-color: #1A1A1A;" title="Đen"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Item 4: Ribbed Relaxed Crewneck Sweater -->
+          <article class="product-card" data-category="sweater" data-price="590000" data-sizes="M,L,XL" data-colors="xam-tieu,den" data-bestseller="false" data-name="ribbed relaxed crewneck sweater">
+            <div class="product-badge-group">
+              <span class="product-badge badge-stock">Còn ít</span>
+            </div>
+            <div class="product-thumb-wrap">
+              <img src="assert/demo-products/xam_tieu.webp" alt="Ribbed Relaxed Crewneck Sweater" class="listing-card-img" data-default="assert/demo-products/xam_tieu.webp">
+              <div class="product-quick-action">
+                <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+              </div>
+            </div>
+            <div class="product-details">
+              <span class="product-category-meta">Áo sweater</span>
+              <h3 class="product-title">
+                <a href="product.html">Ribbed Relaxed Crewneck Sweater</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="product-price">590.000₫</span>
+              </div>
+              <div class="swatches-row">
+                <span class="color-swatch-dot active" style="background-color: #A8A8A8;" title="Xám Tiêu"></span>
+                <span class="color-swatch-dot" style="background-color: #1A1A1A;" title="Đen"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Item 5: Double Zip Minimalist Fleece Hoodie -->
+          <article class="product-card" data-category="hoodie-zip" data-price="720000" data-sizes="L,XL" data-colors="xam-dam,den" data-bestseller="true" data-name="double zip minimalist fleece hoodie">
+            <div class="product-badge-group">
+              <span class="product-badge badge-new">New</span>
+            </div>
+            <div class="product-thumb-wrap">
+              <img src="assert/cat-hoodie-zip.jpg" alt="Double Zip Minimalist Fleece Hoodie" class="listing-card-img" data-default="assert/cat-hoodie-zip.jpg">
+              <div class="product-quick-action">
+                <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+              </div>
+            </div>
+            <div class="product-details">
+              <span class="product-category-meta">Áo hoodies zip</span>
+              <h3 class="product-title">
+                <a href="product.html">Double Zip Minimalist Fleece Hoodie</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="product-price">720.000₫</span>
+              </div>
+              <div class="swatches-row">
+                <span class="color-swatch-dot active" style="background-color: #5F6368;" title="Xám Đậm"></span>
+                <span class="color-swatch-dot" style="background-color: #1A1A1A;" title="Đen"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Item 6: Essential Drop Shoulder Hoodie -->
+          <article class="product-card" data-category="hoodie" data-price="620000" data-sizes="M,L,XL" data-colors="navy,xam-chi" data-bestseller="false" data-name="essential drop shoulder hoodie navy">
+            <div class="product-thumb-wrap">
+              <img src="assert/cat-hoodie.jpg" alt="Essential Drop Shoulder Hoodie" class="listing-card-img" data-default="assert/cat-hoodie.jpg">
+              <div class="product-quick-action">
+                <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+              </div>
+            </div>
+            <div class="product-details">
+              <span class="product-category-meta">Áo hoodies</span>
+              <h3 class="product-title">
+                <a href="product.html">Essential Drop Shoulder Hoodie</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="product-price">620.000₫</span>
+              </div>
+              <div class="swatches-row">
+                <span class="color-swatch-dot active" style="background-color: #233D7B;" title="Navy"></span>
+                <span class="color-swatch-dot" style="background-color: #4A4D53;" title="Xám Chì"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Item 7: Vintage Washed Graphic Tee -->
+          <article class="product-card" data-category="tshirt" data-price="350000" data-sizes="M,L" data-colors="den,xam-tieu" data-bestseller="false" data-name="vintage washed graphic tee">
+            <div class="product-thumb-wrap">
+              <img src="assert/cat-tshirt.jpg" alt="Vintage Washed Graphic Tee" class="listing-card-img" data-default="assert/cat-tshirt.jpg">
+              <div class="product-quick-action">
+                <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+              </div>
+            </div>
+            <div class="product-details">
+              <span class="product-category-meta">Áo thun</span>
+              <h3 class="product-title">
+                <a href="product.html">Vintage Washed Studio Graphic Tee</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="product-price">350.000₫</span>
+              </div>
+              <div class="swatches-row">
+                <span class="color-swatch-dot active" style="background-color: #1A1A1A;" title="Đen"></span>
+                <span class="color-swatch-dot" style="background-color: #A8A8A8;" title="Xám Tiêu"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Item 8: Architectural Mockneck Sweater -->
+          <article class="product-card" data-category="sweater" data-price="680000" data-sizes="M,L,XL" data-colors="xam-chi,navy" data-bestseller="true" data-name="architectural mockneck sweater">
+            <div class="product-badge-group">
+              <span class="product-badge badge-new">New</span>
+            </div>
+            <div class="product-thumb-wrap">
+              <img src="assert/cat-sweater.jpg" alt="Architectural Mockneck Sweater" class="listing-card-img" data-default="assert/cat-sweater.jpg">
+              <div class="product-quick-action">
+                <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+              </div>
+            </div>
+            <div class="product-details">
+              <span class="product-category-meta">Áo sweater</span>
+              <h3 class="product-title">
+                <a href="product.html">Architectural Mockneck Sweater</a>
+              </h3>
+              <div class="product-price-row">
+                <span class="product-price">680.000₫</span>
+              </div>
+              <div class="swatches-row">
+                <span class="color-swatch-dot active" style="background-color: #4A4D53;" title="Xám Chì"></span>
+                <span class="color-swatch-dot" style="background-color: #233D7B;" title="Navy"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Empty State (Shown when no items match the filter) -->
+          <div class="empty-state" id="emptyState">
+            <svg class="empty-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6"/>
+            </svg>
+            <h3 class="empty-title">Không tìm thấy sản phẩm phù hợp</h3>
+            <p class="empty-desc">Thử điều chỉnh hoặc xóa bớt các tiêu chí lọc để xem thêm sản phẩm khác.</p>
+            <button type="button" class="btn btn-primary" id="btnEmptyReset">Xóa Bộ Lọc &amp; Xem Tất Cả</button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="assert/logo.png" alt="meandee STUDIO Logo">
+            <div class="brand-text">
+              <span class="brand-name">meandee</span>
+              <span class="brand-sub">STUDIO</span>
+            </div>
+          </a>
+          <p class="footer-brand-bio">
+            meandee STUDIO — Tối giản, kiến trúc và bền bỉ trong từng đường nét.
+          </p>
+          <div class="footer-contacts-list">
+            <span>📍 Store: 128 Nguyễn Trãi, Q.1, TP. HCM</span>
+            <span>📞 Hotline: 0908 123 456</span>
+            <span>✉️ Email: contact@meandee.studio</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Danh Mục</h4>
+          <ul class="footer-links-list">
+            <li><a href="search.html?category=hoodie-zip">Áo hoodies zip</a></li>
+            <li><a href="search.html?category=hoodie">Áo hoodies</a></li>
+            <li><a href="search.html?category=tshirt">Áo thun</a></li>
+            <li><a href="search.html?category=sweater">Áo sweater</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Chính Sách</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">Hướng dẫn chọn Size</a></li>
+            <li><a href="#">Chính sách đổi trả 7 ngày</a></li>
+            <li><a href="#">Vận chuyển &amp; Giao nhận</a></li>
+            <li><a href="#">Bảo mật thông tin</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Đăng Ký Bản Tin</h4>
+          <p class="footer-newsletter-text">
+            Cập nhật sớm nhất các đợt phát hành sản phẩm và nhận ưu đãi riêng.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); window.showToast('Đã đăng ký nhận bản tin!');">
+            <input type="email" class="newsletter-input" placeholder="Email của bạn..." required>
+            <button type="submit" class="btn-newsletter">Gửi</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 meandee STUDIO. All rights reserved.</span>
+        <span>Phát triển theo tiêu chuẩn UI/UX E-commerce hiện đại.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification element -->
+  <div class="toast-notification" id="toastNotification">
+    <svg class="toast-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+    </svg>
+    <span class="toast-text" id="toastMessage">Thông báo</span>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

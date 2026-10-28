@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Magic Venue Heavyweight Zip Hoodie — Áo hoodie khoá kéo nỉ bông 420gsm cao cấp từ meandee STUDIO. 4 phối màu trung tính, form dáng boxy hiện đại.">
+  <title>Magic Venue Heavyweight Zip Hoodie — meandee STUDIO</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assert/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="brandLogo">
+        <img src="assert/logo.png" alt="meandee STUDIO Logo">
+        <div class="brand-text">
+          <span class="brand-name">meandee</span>
+          <span class="brand-sub">STUDIO</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="search.html" class="nav-link active">Shop</a>
+        <a href="search.html?sort=newest" class="nav-link">New Arrivals</a>
+        <a href="index.html#about" class="nav-link">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="search.html" class="action-btn" aria-label="Tìm kiếm sản phẩm">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+          </svg>
+        </a>
+        <button class="action-btn" aria-label="Danh sách yêu thích">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+          </svg>
+          <span class="badge-count">1</span>
+        </button>
+        <button class="action-btn" id="headerCartBtn" aria-label="Giỏ hàng">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+          </svg>
+          <span class="badge-count" id="cartBadgeCount">2</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       BREADCRUMB NAVIGATION
+       ========================================================================== -->
+  <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+        <li class="breadcrumb-separator">/</li>
+        <li class="breadcrumb-item"><a href="search.html?category=hoodie-zip">Áo hoodies zip</a></li>
+        <li class="breadcrumb-separator">/</li>
+        <li class="breadcrumb-item current" aria-current="page">Magic Venue Heavyweight Zip Hoodie</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       PDP MAIN SECTION (2-Column E-Commerce Standard Layout)
+       ========================================================================== -->
+  <main class="pdp-main-section">
+    <div class="container">
+      <div class="pdp-grid">
+        
+        <!-- ====================================================================
+             LEFT COLUMN: IMAGE GALLERY WITH COLOR VARIANT INTERACTION
+             ==================================================================== -->
+        <div class="pdp-gallery-wrap">
+          <!-- Main Product Image -->
+          <div class="pdp-main-image-box" id="pdpMainImageBox">
+            <img src="assert/demo-products/den.webp" 
+                 alt="Magic Venue Heavyweight Zip Hoodie - Màu Đen" 
+                 class="pdp-main-image fade-in" 
+                 id="pdpMainImage">
+            <div class="product-badge-group">
+              <span class="product-badge badge-new">New Release</span>
+              <span class="product-badge badge-sale">-19% OFF</span>
+            </div>
+          </div>
+
+          <!-- Thumbnails Strip (4 Colors) -->
+          <div class="pdp-thumbnails-strip" id="pdpThumbsStrip">
+            <!-- Thumb 1: Đen -->
+            <div class="pdp-thumb-item active" data-color="den" data-img="assert/demo-products/den.webp" data-name="Đen (Noir Black)">
+              <img src="assert/demo-products/den.webp" alt="Phối màu Đen">
+              <div class="pdp-thumb-caption">Đen</div>
+            </div>
+
+            <!-- Thumb 2: Xám Chì -->
+            <div class="pdp-thumb-item" data-color="xam-chi" data-img="assert/demo-products/xam-chi.webp" data-name="Xám Chì (Charcoal)">
+              <img src="assert/demo-products/xam-chi.webp" alt="Phối màu Xám Chì">
+              <div class="pdp-thumb-caption">Xám Chì</div>
+            </div>
+
+            <!-- Thumb 3: Xám Đậm -->
+            <div class="pdp-thumb-item" data-color="xam-dam" data-img="assert/demo-products/xam-dam.webp" data-name="Xám Đậm (Dark Slate)">
+              <img src="assert/demo-products/xam-dam.webp" alt="Phối màu Xám Đậm">
+              <div class="pdp-thumb-caption">Xám Đậm</div>
+            </div>
+
+            <!-- Thumb 4: Xám Tiêu -->
+            <div class="pdp-thumb-item" data-color="xam-tieu" data-img="assert/demo-products/xam_tieu.webp" data-name="Xám Tiêu (Heather)">
+              <img src="assert/demo-products/xam_tieu.webp" alt="Phối màu Xám Tiêu">
+              <div class="pdp-thumb-caption">Xám Tiêu</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             RIGHT COLUMN: PRODUCT INFO, VARIANTS, QUANTITY & CTAs
+             ==================================================================== -->
+        <div class="pdp-info-wrap">
+          <!-- Title & Collection Header -->
+          <div class="pdp-header-block">
+            <div class="pdp-collection-label">meandee STUDIO &bull; Collection 2026</div>
+            <h1 class="pdp-title" id="pdpProductTitle">Magic Venue Heavyweight Zip Hoodie</h1>
+            
+            <div class="pdp-rating-stock-row">
+              <div class="pdp-rating-stars">
+                <div class="stars-gold">
+                  ★★★★★
+                </div>
+                <span><strong>4.9</strong> (148 đánh giá đã mua)</span>
+              </div>
+              <div class="pdp-stock-badge">
+                <span class="pulse-dot"></span>
+                <span>Còn hàng (In Stock)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pricing -->
+          <div class="pdp-price-wrap">
+            <span class="pdp-current-price" id="pdpPrice">690.000₫</span>
+            <span class="pdp-original-price">850.000₫</span>
+            <span class="pdp-discount-pill">Tiết kiệm 160.000₫ (-19%)</span>
+          </div>
+
+          <!-- Variant Selector 1: COLOR (Interactive Variant Switcher) -->
+          <div class="pdp-variant-block">
+            <div class="variant-label-row">
+              <span class="variant-label-name">Màu Sắc:</span>
+              <span class="variant-selected-value" id="selectedColorName">Đen (Noir Black)</span>
+            </div>
+            
+            <!-- 4 Visual Color Swatches -->
+            <div class="pdp-color-swatches-list" id="pdpColorSwatches">
+              <!-- Swatch 1: Đen -->
+              <button type="button" class="pdp-color-swatch-btn active" 
+                      data-color="den" 
+                      data-color-name="Đen (Noir Black)" 
+                      data-img="assert/demo-products/den.webp"
+                      aria-label="Chọn màu Đen">
+                <span class="pdp-swatch-circle" style="background-color: #1A1A1A;"></span>
+                <span class="pdp-swatch-text">Đen</span>
+              </button>
+
+              <!-- Swatch 2: Xám Chì -->
+              <button type="button" class="pdp-color-swatch-btn" 
+                      data-color="xam-chi" 
+                      data-color-name="Xám Chì (Charcoal)" 
+                      data-img="assert/demo-products/xam-chi.webp"
+                      aria-label="Chọn màu Xám Chì">
+                <span class="pdp-swatch-circle" style="background-color: #4A4D53;"></span>
+                <span class="pdp-swatch-text">Xám Chì</span>
+              </button>
+
+              <!-- Swatch 3: Xám Đậm -->
+              <button type="button" class="pdp-color-swatch-btn" 
+                      data-color="xam-dam" 
+                      data-color-name="Xám Đậm (Dark Slate)" 
+                      data-img="assert/demo-products/xam-dam.webp"
+                      aria-label="Chọn màu Xám Đậm">
+                <span class="pdp-swatch-circle" style="background-color: #5F6368;"></span>
+                <span class="pdp-swatch-text">Xám Đậm</span>
+              </button>
+
+              <!-- Swatch 4: Xám Tiêu -->
+              <button type="button" class="pdp-color-swatch-btn" 
+                      data-color="xam-tieu" 
+                      data-color-name="Xám Tiêu (Heather)" 
+                      data-img="assert/demo-products/xam_tieu.webp"
+                      aria-label="Chọn màu Xám Tiêu">
+                <span class="pdp-swatch-circle" style="background-color: #A8A8A8;"></span>
+                <span class="pdp-swatch-text">Xám Tiêu</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Variant Selector 2: SIZE -->
+          <div class="pdp-variant-block">
+            <div class="variant-label-row">
+              <span class="variant-label-name">Kích Thước (Size):</span>
+              <a href="#sizeGuideTab" class="size-guide-link" id="btnOpenSizeGuide">Bảng quy đổi kích thước &rarr;</a>
+            </div>
+            <div class="pdp-sizes-list" id="pdpSizesList">
+              <button type="button" class="pdp-size-btn" data-size="M">[ M ]</button>
+              <button type="button" class="pdp-size-btn active" data-size="L">[ L ]</button>
+              <button type="button" class="pdp-size-btn" data-size="XL">[ XL ]</button>
+            </div>
+          </div>
+
+          <!-- Quantity & CTAs -->
+          <div class="pdp-actions-block">
+            <div class="quantity-add-row">
+              <!-- Quantity Picker -->
+              <div class="quantity-picker">
+                <button type="button" class="qty-btn" id="qtyMinus" aria-label="Giảm số lượng">-</button>
+                <input type="text" class="qty-input" id="qtyInput" value="1" readonly>
+                <button type="button" class="qty-btn" id="qtyPlus" aria-label="Tăng số lượng">+</button>
+              </div>
+
+              <!-- Primary CTA: Thêm vào giỏ hàng (Màu chủ đạo #233D7B) -->
+              <button type="button" class="btn-add-to-cart" id="btnAddToCart">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+                <span>Thêm vào giỏ hàng</span>
+              </button>
+            </div>
+
+            <!-- Secondary CTA: Mua ngay -->
+            <button type="button" class="btn-buy-now" id="btnBuyNow">
+              Mua Ngay &bull; Thanh Toán Nhanh
+            </button>
+          </div>
+
+          <!-- Service Perks / Commitments -->
+          <div class="pdp-perks-list">
+            <div class="perk-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+              </svg>
+              <span>Miễn phí giao hàng từ 500k</span>
+            </div>
+            <div class="perk-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+              <span>Đổi trả tận nơi trong 7 ngày</span>
+            </div>
+            <div class="perk-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <span>Cam kết 100% Cotton 420gsm</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       TABS SECTION (Mô tả sản phẩm & Đánh giá)
+       ========================================================================== -->
+  <section class="pdp-tabs-section" id="productTabsSection">
+    <div class="container">
+      <!-- Tabs Navigation -->
+      <div class="tabs-nav-bar" role="tablist">
+        <button type="button" class="tab-nav-btn active" data-tab="tabDescription" role="tab" aria-selected="true">
+          Mô Tả Sản Phẩm
+        </button>
+        <button type="button" class="tab-nav-btn" data-tab="tabReviews" role="tab" aria-selected="false">
+          Đánh Giá (148)
+        </button>
+      </div>
+
+      <!-- Tab 1: Mô tả sản phẩm -->
+      <div class="tab-pane active" id="tabDescription" role="tabpanel">
+        <div class="product-description-content">
+          <div class="desc-block">
+            <h4>Đặc Điểm Thiết Kế &amp; Phom Dáng</h4>
+            <p>
+              Chiếc áo <strong>Magic Venue Heavyweight Zip Hoodie</strong> là biểu tượng cho ngôn ngữ thiết kế tối giản của meandee STUDIO. Được phát triển dựa trên tỷ lệ kiến trúc Boxy fit với phần vai trễ (drop-shoulder) rộng rãi, mang lại vẻ ngoài phóng khoáng và thoải mái tối đa cho người mặc.
+            </p>
+            <p>
+              Hệ thống khoá kéo 2 chiều (double zipper) kim loại mạ mờ chống kẹt, cho phép bạn biến tấu linh hoạt nhiều phong cách layer khác nhau. Phần mũ áo may 2 lớp nỉ dày giúp giữ form đứng hoàn hảo ngay cả khi không đội.
+            </p>
+            
+            <h4 style="margin-top: 1.5rem;">Hướng Dẫn Bảo Quản</h4>
+            <p>
+              - Giặt máy ở chế độ giặt nhẹ với nước lạnh (dưới 30°C) để giữ độ đanh mịn của sợi bông.<br>
+              - Lộn trái áo trước khi giặt và phơi trong bóng râm, tránh ánh nắng gắt trực tiếp.<br>
+              - Không sử dụng thuốc tẩy clo. Không sấy khô ở nhiệt độ cao.
+            </p>
+          </div>
+
+          <div class="desc-block">
+            <h4>Thông Số Kỹ Thuật Chi Tiết</h4>
+            <div class="spec-list">
+              <div class="spec-row">
+                <span class="spec-label">Chất liệu vải:</span>
+                <span class="spec-val">100% Cotton nỉ bông chải kỹ</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Định lượng vải (Fabric Weight):</span>
+                <span class="spec-val">420 GSM (Heavyweight Fleece)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Kiểu dáng (Fit):</span>
+                <span class="spec-val">Boxy Fit / Drop Shoulder</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Khóa kéo (Zipper):</span>
+                <span class="spec-val">YKK 2-Way Custom Metal Zipper</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Xuất xứ:</span>
+                <span class="spec-val">Made in Vietnam by meandee STUDIO</span>
+              </div>
+            </div>
+
+            <h4 style="margin-top: 1.5rem;">Bảng Tư Vấn Chọn Size</h4>
+            <div style="overflow-x: auto; margin-top: 0.5rem;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 0.8125rem; text-align: left;">
+                <thead>
+                  <tr style="border-bottom: 2px solid var(--c-border); color: var(--c-primary);">
+                    <th style="padding: 8px;">Size</th>
+                    <th style="padding: 8px;">Chiều cao</th>
+                    <th style="padding: 8px;">Cân nặng</th>
+                    <th style="padding: 8px;">Dài áo</th>
+                    <th style="padding: 8px;">Rộng ngực</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid var(--c-border);">
+                    <td style="padding: 8px; font-weight: 700;">M</td>
+                    <td style="padding: 8px;">1m60 - 1m72</td>
+                    <td style="padding: 8px;">50kg - 65kg</td>
+                    <td style="padding: 8px;">68 cm</td>
+                    <td style="padding: 8px;">62 cm</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--c-border); background-color: var(--c-primary-light);">
+                    <td style="padding: 8px; font-weight: 700; color: var(--c-primary);">L (Chuẩn)</td>
+                    <td style="padding: 8px;">1m70 - 1m80</td>
+                    <td style="padding: 8px;">65kg - 78kg</td>
+                    <td style="padding: 8px;">71 cm</td>
+                    <td style="padding: 8px;">65 cm</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--c-border);">
+                    <td style="padding: 8px; font-weight: 700;">XL</td>
+                    <td style="padding: 8px;">1m78 - 1m90</td>
+                    <td style="padding: 8px;">75kg - 92kg</td>
+                    <td style="padding: 8px;">74 cm</td>
+                    <td style="padding: 8px;">68 cm</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Đánh giá sản phẩm -->
+      <div class="tab-pane" id="tabReviews" role="tabpanel">
+        <!-- Review Summary Card -->
+        <div class="reviews-summary-card">
+          <div class="rating-big-box">
+            <span class="big-rating-score">4.9</span>
+            <div class="stars-gold" style="font-size: 1.25rem; margin-bottom: 6px;">★★★★★</div>
+            <span style="font-size: 0.8125rem; color: var(--c-text-secondary);">Dựa trên 148 lượt đánh giá</span>
+          </div>
+
+          <div class="rating-breakdown">
+            <div class="breakdown-row">
+              <span>5 sao</span>
+              <div class="bar-bg"><div class="bar-fill" style="width: 88%;"></div></div>
+              <span>88%</span>
+            </div>
+            <div class="breakdown-row">
+              <span>4 sao</span>
+              <div class="bar-bg"><div class="bar-fill" style="width: 10%;"></div></div>
+              <span>10%</span>
+            </div>
+            <div class="breakdown-row">
+              <span>3 sao</span>
+              <div class="bar-bg"><div class="bar-fill" style="width: 2%;"></div></div>
+              <span>2%</span>
+            </div>
+            <div class="breakdown-row">
+              <span>2 sao</span>
+              <div class="bar-bg"><div class="bar-fill" style="width: 0%;"></div></div>
+              <span>0%</span>
+            </div>
+            <div class="breakdown-row">
+              <span>1 sao</span>
+              <div class="bar-bg"><div class="bar-fill" style="width: 0%;"></div></div>
+              <span>0%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Customer Review Comments List -->
+        <div class="reviews-list">
+          <!-- Review 1 -->
+          <div class="review-item">
+            <div class="review-author-row">
+              <span class="reviewer-name">
+                Trần Hoàng Nam
+                <span class="badge-verified">✓ Đã mua màu Đen (Size L)</span>
+              </span>
+              <span class="review-date">3 ngày trước</span>
+            </div>
+            <div class="stars-gold" style="margin-bottom: 6px;">★★★★★</div>
+            <p class="review-text">
+              Chất nỉ 420gsm của meandee STUDIO cầm trên tay thực sự khác biệt, rất đầm và dày dặn. Form boxy mặc lên vai đứng đẹp cực kỳ, khoá kéo 2 chiều mượt mà không bị cộm. Rất đáng đồng tiền bát gạo!
+            </p>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-item">
+            <div class="review-author-row">
+              <span class="reviewer-name">
+                Lê Phương Anh
+                <span class="badge-verified">✓ Đã mua màu Xám Chì (Size M)</span>
+              </span>
+              <span class="review-date">1 tuần trước</span>
+            </div>
+            <div class="stars-gold" style="margin-bottom: 6px;">★★★★★</div>
+            <p class="review-text">
+              Màu xám chì ngoài đời nhìn sang hơn trong ảnh nhiều, tông lạnh cực kỳ tôn da. Nón áo 2 lớp dày dặn đội lên giữ form rất chắc chắn. Mình 1m65 54kg mặc size M trùm mông vừa vặn kiểu oversized nhẹ.
+            </p>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-item">
+            <div class="review-author-row">
+              <span class="reviewer-name">
+                Nguyễn Minh Quân
+                <span class="badge-verified">✓ Đã mua màu Xám Tiêu (Size XL)</span>
+              </span>
+              <span class="review-date">2 tuần trước</span>
+            </div>
+            <div class="stars-gold" style="margin-bottom: 6px;">★★★★★</div>
+            <p class="review-text">
+              Giao hàng siêu nhanh, đóng gói trong hộp carton chỉn chu thơm phức. Áo may kỹ từng đường chỉ, bo tay và bo gấu áo co giãn tốt không bị bai nhão sau khi giặt. Sẽ ủng hộ shop thêm mẫu hoodie chui đầu!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SUGGESTED / RELATED PRODUCTS ("Có thể bạn cũng thích")
+       ========================================================================== -->
+  <section class="related-products-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="header-info">
+          <span class="eyebrow">Gợi Ý Phối Đồ</span>
+          <h2 class="heading-section">Có Thể Bạn Cũng Thích</h2>
+        </div>
+        <a href="search.html" class="btn btn-secondary">Xem Tất Cả &rarr;</a>
+      </div>
+
+      <div class="products-grid">
+        <!-- Related 1 -->
+        <article class="product-card">
+          <div class="product-thumb-wrap">
+            <img src="assert/demo-products/xam-dam.webp" alt="Boxy Pullover Hoodie">
+            <div class="product-quick-action">
+              <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="product-details">
+            <span class="product-category-meta">Áo hoodies</span>
+            <h3 class="product-title"><a href="product.html">Boxy Heavyweight Pullover Hoodie</a></h3>
+            <div class="product-price-row">
+              <span class="product-price">650.000₫</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Related 2 -->
+        <article class="product-card">
+          <div class="product-thumb-wrap">
+            <img src="assert/cat-hoodie-zip.jpg" alt="Double Zip Minimalist Fleece Hoodie">
+            <div class="product-quick-action">
+              <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="product-details">
+            <span class="product-category-meta">Áo hoodies zip</span>
+            <h3 class="product-title"><a href="product.html">Double Zip Minimalist Fleece Hoodie</a></h3>
+            <div class="product-price-row">
+              <span class="product-price">720.000₫</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Related 3 -->
+        <article class="product-card">
+          <div class="product-thumb-wrap">
+            <img src="assert/cat-tshirt.jpg" alt="Studio Oversized Heavyweight Tee">
+            <div class="product-quick-action">
+              <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="product-details">
+            <span class="product-category-meta">Áo thun</span>
+            <h3 class="product-title"><a href="product.html">Studio Heavy Cotton Oversized Tee</a></h3>
+            <div class="product-price-row">
+              <span class="product-price">380.000₫</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Related 4 -->
+        <article class="product-card">
+          <div class="product-thumb-wrap">
+            <img src="assert/cat-sweater.jpg" alt="Ribbed Relaxed Crewneck Sweater">
+            <div class="product-quick-action">
+              <a href="product.html" class="quick-view-btn">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="product-details">
+            <span class="product-category-meta">Áo sweater</span>
+            <h3 class="product-title"><a href="product.html">Ribbed Relaxed Crewneck Sweater</a></h3>
+            <div class="product-price-row">
+              <span class="product-price">590.000₫</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="assert/logo.png" alt="meandee STUDIO Logo">
+            <div class="brand-text">
+              <span class="brand-name">meandee</span>
+              <span class="brand-sub">STUDIO</span>
+            </div>
+          </a>
+          <p class="footer-brand-bio">
+            meandee STUDIO — Thương hiệu thời trang đường phố đương đại với tinh thần tối giản, chuẩn mực may đo và sợi bông bền bỉ.
+          </p>
+          <div class="footer-contacts-list">
+            <span>📍 Store: 128 Nguyễn Trãi, Q.1, TP. HCM</span>
+            <span>📞 Hotline: 0908 123 456</span>
+            <span>✉️ Email: contact@meandee.studio</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Danh Mục</h4>
+          <ul class="footer-links-list">
+            <li><a href="search.html?category=hoodie-zip">Áo hoodies zip</a></li>
+            <li><a href="search.html?category=hoodie">Áo hoodies</a></li>
+            <li><a href="search.html?category=tshirt">Áo thun</a></li>
+            <li><a href="search.html?category=sweater">Áo sweater</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Chính Sách</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">Hướng dẫn chọn Size</a></li>
+            <li><a href="#">Chính sách đổi trả 7 ngày</a></li>
+            <li><a href="#">Vận chuyển &amp; Giao nhận</a></li>
+            <li><a href="#">Bảo mật thông tin</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Đăng Ký Bản Tin</h4>
+          <p class="footer-newsletter-text">
+            Đăng ký để nhận thông tin bộ sưu tập và ưu đãi đặc quyền từ meandee STUDIO.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); window.showToast('Cảm ơn bạn đã đăng ký nhận tin!');">
+            <input type="email" class="newsletter-input" placeholder="Email của bạn..." required>
+            <button type="submit" class="btn-newsletter">Gửi</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 meandee STUDIO. All rights reserved.</span>
+        <span>Phát triển theo tiêu chuẩn UI/UX E-commerce hiện đại.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification element -->
+  <div class="toast-notification" id="toastNotification">
+    <svg class="toast-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+    </svg>
+    <span class="toast-text" id="toastMessage">Đã thêm vào giỏ hàng!</span>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
